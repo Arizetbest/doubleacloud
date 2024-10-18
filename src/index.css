@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.BTN:hover{
+    box-shadow: 0 0 5px #113cfa, 0 0 25px #113cfa, 0 0 50px #113cfa, 0 0 100px ;
+}
+.BTNS:hover{
+    box-shadow: 0 0 5px #11fa30, 0 0 25px #11fa30, 0 0 50px #11fa30, 0 0 100px ;
+}
+
+.BackgroundFlight{
+    background-image: url(../src/Components/Images/06.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

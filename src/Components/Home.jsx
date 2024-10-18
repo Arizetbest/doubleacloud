@@ -13,10 +13,15 @@ import Img2 from "./Images/02.jpg";
 import Img1 from "./Images/03.jpg";
 import Img4 from "./Images/05.jpg";
 import Img01 from "./Images/06.jpg";
+import Arinze from "./Images/Arinze.jpg";
 import Img02 from "./Images/man1.jpg";
-import Counting from "./Counting";
+import Counting from "./Carousel";
 import Play from './Images/Play.png'
 import Newsletter from "./Newsletter";
+import Experience from "./Images/Experience.png"
+import SimpleSlider from "./Carousel";
+import OurTopCountries from "./OurTopCountries";
+import StudySteps from "./StudySteps";
 
 function Home() {
   useEffect(() => {
@@ -31,38 +36,38 @@ function Home() {
 
   const Image = [
     {
-      src: Img02,
-      Name1: "Obafemi adegoke",
-      Name2: "CTO",
+      src: Arinze,
+      Name1: "Mr Arize Onubiyi",
+      Name2: "Founder",
     },
     {
       src: Img02,
-      Name1: "Emmanuel",
-      Name2: "Project manager",
+      Name1: "Mr Obafemi adegoke",
+      Name2: "CO-Founder",
     },
     {
       src: Img02,
-      Name1: "Arize Onubiyi",
-      Name2: "Devop Engineer",
+      Name1: "Mr Bernard Chika Uwaezuoke",
+      Name2: "Administration",
     },
   ]
   const Name = [
     {
       id: 1,
       Icon: <FaConnectdevelop />,
-      Title: "Digital Archive Development",
-      Sub: "Preserving and sharing Africa's rich heritage through cutting-edge technology. Curating historical documents and cultural resources to foster cross-cultural understanding and empower global access to African knowledge.",
+      Title: "Our Mission",
+      Sub: "To create and facilitate opportunities for academic achievement, global competence and personal growth through quality international education.",
     },
     {
       id: 2,
       Icon: <CgCommunity />,
-      Title: "Cross-Cultural Communication Tools",
-      Sub: "Promoting international communication and cooperation. By overcoming cultural gaps for mutual appreciation, cutting-edge technology enable seamless communication and understanding across varied African communities and individuals globally.",
+      Title: "Our Vision",
+      Sub: "To become one of the foremost international education consulting firms in Africa and to continuously create the most seamless study abroad experience for every student",
     },
     {
       id: 3,
       Icon: <SiSololearn />,
-      Title: "African Studies E-Learning Courses",
+      Title: "African Studies & E-Learning Courses",
       Sub: "Comprehensive online education on Africa's diverse cultures, history, politics, and societies. Accessible to learners worldwide, fostering cross-cultural awareness and promoting a deeper understanding of the continent's complexities.",
     },
   ];
@@ -71,30 +76,30 @@ function Home() {
     {
       Id: 1,
       Image: Img1,
-      Title: "Software development and Training Services",
+      Title: "FREE ASSESSMENT",
       Description:
-        "We offer comprehensive software development services and training for businesses across diverse sectors. Our expert team equips clients with cutting-edge solutions and the knowledge to thrive in today's fast-paced technological landscape. Empowering success is at the core of our mission.",
+        "Receive a personalized assessment of your academic background and extracurricular activities. We identify your strengths and improvement areas to save time and avoid disappointment in your study abroad journey.",
     },
     {
       Id: 2,
       Image: Img2,
-      Title: "Project Management & Training Services",
+      Title: "School Finding/ School Research",
       Description:
-        "For companies in a variety of industries, we provide project management and training services. Our knowledgeable team guarantees smooth project execution and provides teams with crucial skills so they can successfully accomplish their goals. At the core of our dedication is enabling success.",
+        "We provide a tailored list of universities that fit your academic and career goals. With our guidance, you'll confidently choose the best path to achieving your study abroad dreams.",
     },
     {
       Id: 3,
       Image: Img3,
-      Title: "Cloud services and Training.",
+      Title: "Handling of Applications",
       Description:
-        "We offer cloud services and training to companies across a range of industries. Our knowledgeable staff offers dependable and scalable cloud solutions, and our extensive training gives clients the know-how to properly use cloud technology. Success empowerment is our top priority.",
+        "Our team of experts will guide you through every step of the application process, ensuring your materials stand out and impress university admissions committees.",
     },
     {
       Id: 4,
       Image: Img4,
-      Title: "Cloud services and Training.",
+      Title: "Visa Application",
       Description:
-        "We offer cloud services and training to companies across a range of industries. Our knowledgeable staff offers dependable and scalable cloud solutions, and our extensive training gives clients the know-how to properly use cloud technology. Success empowerment is our top priority.",
+        "Our visa services cover every step: visa application assistance, interview preparation, and follow-up. With a 100% customer satisfaction guarantee, your visa process will be stress-free and successful.",
     },
   ];
   return (
@@ -104,44 +109,56 @@ function Home() {
         loop
         muted
         controls
-        className="w-full lg:h-auto md:h-auto relative sm:hidden md:block scroll-smooth object-cover top-0"
+        className="w-full lg:h-screen md:h-auto relative sm:hidden md:block scroll-smooth object-cover top-0"
       >
         <source src={Video001} type="video/webm" />
         Your browser does not support the video tag.
       </Video>
-      <div className="text selection:bg-blue-800 selection:text-white bg-black/60 z-30 sm:bg-black/80 absolute top-0 w-full lg:pt-[17%] md:pt-[18%] sm:pt-[30%] lg:h-[52.3rem] pb-14 lg:pl-[10%] md:pl-[6%] pl-[3%] ">
-        <p
-          data-aos="fade-left"
-          className="text-white uppercase py-1 font-bold text-sm"
-        >
-          AFRISTUD.COM
-        </p>
-        <p
-          data-aos="fade-right"
-          className="lg:text-4xl md:text-2xl sm:text-lg text-white Font uppercase font-black lg:py-5 md:py-2 sm:py-3"
-        >
-          Empowering Tech Solutions and <br />
-          <span>Seamless Travel Experiences</span>
-        </p>
-        <p
-          data-aos="fade-up"
-          className="lg:text-sm md:text-sm sm:text-xs text-white lg:w-[50%] lg:tracking-wider mb-10 font-semibold"
-        >
-          Unlocking Opportunities Worldwide. Empowering with Innovative Tech
-          Solutions and Seamlessly Facilitating International Travel for
-          Memorable Journeys. Your Partner for Boundless Horizons and
-          Unforgettable Experiences in the Tech-savvy Global Landscape.
-        </p>
-        <div data-aos="fade-up-right" className="read">
-          <Link
-            to="/"
-            className="py-4 lg:px-10 md:px-16 sm:px-8 -mt-16 rounded-xl text-white bg-blue-800 uppercase text-sm font-semibold"
+      <div className="text selection:bg-blue-800 selection:text-white bg-black/60 z-30 sm:bg-black/80 absolute top-0 w-full h-screen">
+        <div className="contain py-[17%] px-24">
+          <p
+            data-aos="fade-left"
+            className="text-white uppercase py-1 font-bold text-sm"
           >
-            Get Started
-          </Link>
+            DoubleACloud.COM
+          </p>
+          <p
+            data-aos="fade-right"
+            className="lg:text-4xl md:text-2xl sm:text-lg text-white Font uppercase font-black lg:py-5 md:py-2 sm:py-3"
+          >
+            Our Study Abroad services improve your chances <br /> of getting into the universities you want. <br />
+            <span>Seamless Travel Experiences</span>
+          </p>
+          <p
+            data-aos="fade-up"
+            className="lg:text-sm md:text-sm sm:text-xs text-white lg:w-[50%] lg:tracking-wider mb-10 font-semibold"
+          >
+            Unlocking Opportunities Worldwide. Empowering with Innovative Tech
+            Solutions and Seamlessly Facilitating International Travel for
+            Memorable Journeys. Your Partner for Boundless Horizons and
+            Unforgettable Experiences in the Tech-savvy Global Landscape.
+          </p>
+          <div className="btn flex gap-20">
+            <div data-aos="fade-up-right" className="read">
+              <Link
+                to="/"
+                className="BTN py-4 lg:px-10 md:px-16 sm:px-8 -mt-16 rounded-sm text-white bg-blue-800 uppercase text-sm font-semibold"
+              >
+                Get Started
+              </Link>
+            </div>
+            <div data-aos="fade-up-right" className="read">
+              <Link
+                to="/"
+                className="BTNS py-4 lg:px-10 md:px-16 sm:px-8 -mt-16 rounded-sm text-white bg-green-600 uppercase text-sm font-semibold"
+              >
+                WhatsApp
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="bg-blue-800/10">
+      <div className="bg-blue-800/20">
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 pt-[100%] lg:pt-0 md:pt-32 gap-10 lg:mx-20 md:mx-20 mx-5">
           {Name.map((item) => (
             <div className="" key={item.id}>
@@ -169,11 +186,11 @@ function Home() {
           ))}
         </div>
       </div>
-      <div className="bg-blue-800/10 py-10">
+      <div className="bg-blue-800/20 py-10">
         <div className="Our">
           <div className="z-20 relative">
             <h1 className="text-center text-2xl text-blue-800 uppercase font-bold border-b border-gray-400 mx-20 pb-2">
-              Our Services
+              What is In For You
             </h1>
           </div>
           <div className="lg:grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 mx-[5%] mt-10">
@@ -241,7 +258,7 @@ function Home() {
               {service.map((service, index) => {
                 return (
                   <figure
-                    className={`cursor-pointer lg:mb-0 md:mb-5 sm:mb-5 ${service.Id === 3 ? "-mt-[10%]" : ""
+                    className={`cursor-pointer lg:mb-0 md:mb-5 sm:mb-5 ${service.Id === 3 ? "mt-[8%]" : service.Id === 1 ? " mt-[15%]" : service.Id === 4 ? " -mt-[17%]" : ""
                       }`}
                   >
                     <img
@@ -249,9 +266,12 @@ function Home() {
                       alt=""
                       className="w-[100%] rounded-t-2xl"
                     />
-                    <figcaption className="bg-white rounded-b-2xl py-8 lg:px-10 md:px-5 sm:px-5">
-                      <p className="text-center font-bold text-xl md:ml-5 sm:ml-5">
+                    <figcaption className="bg-white rounded-b-2xl py-8 ">
+                      <p className="text-center font-bold text-xl md:ml-5 sm:ml-5 lg:px-10 md:px-5 sm:px-5">
                         {service.Title}
+                      </p>
+                      <p className="text-center font-thin text-lg md:ml-0 lg:px-6 md:px-5 sm:px-5 sm:ml-5">
+                        {service.Description}
                       </p>
                     </figcaption>
                   </figure>
@@ -261,37 +281,46 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="our-mission lg:my-20 grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 py-10 lg:px-32 gap-32">
-        <div className="two my-auto text-white bg-black/50 lg:p-16 md:p-10 p-3">
-          <p className="text-5xl font-semibold">Our Mission</p>
-          <p className="py-10 relative">
-            The utilization of technology to investigate, communicate, and
-            promote Africa's rich cultural legacy and historical contributions
-            can help to enhance African studies. By encouraging cross-cultural
-            appreciation and understanding, we hope to enable people everywhere
-            to engage with the diversity and complexity of the African
-            continent.
-          </p>
+      <div className="WhyChoose bg-black h-screen py-20 px-32">
+        <p className="text-5xl font-semibold text-center text-white">Why Choose DoubleACloud?</p>
+        <p className=" text-white text-xl text-center mx-[20%] pt-10">Whether you dream of studying at a world-class university or exploring a new culture, DoubleACloud is here to support you. Here’s why students choose us:</p>
+        <div className="containergrid">
+
         </div>
-        <div className="bg sm:-mt-32 md:-mt-32 lg:mt-auto">
-          <p className="bg-black/50 py-60 px-60 hidden lg:block md:hidden ml-60 -mt-16 rounded-full absolute"></p>
-          <p className="bg-black/50 py-60 px-60 hidden lg:block md:hidden ml-60 mt-16 rounded-full absolute"></p>
-          <div className="two rounded-e-3xl relative">
-            <img src={Img01} alt="" className=" md:h-auto lg:h-auto object-cover w-full" />
+        <div className="our-mission grid grid-cols-2 gap-9 py-20 mx-[5%]">
+          <div className="content01 bg-white/10 text-white hover:text-black py-10 px-10 rounded-md hover:bg-white/80 my-2">
+            <h2 className="text-3xl font-bold ">Experience</h2>
+            <p className="py-5 font-semibold">With over a decade of experience, DoubleACloud has helped hundreds of students secure admission to top universities abroad.</p>
+            <p className=" text-red-500 hover:underline cursor-pointer">Read more....</p>
+          </div>
+          <div className="content02 bg-white/10 text-white hover:text-black py-10 px-10 rounded-md hover:bg-white/80 my-2">
+            <h2 className="text-3xl font-bold ">Expertise</h2>
+            <p className="py-5 font-semibold">We specialize in study abroad destinations such as the UK, Canada, Europe, and more. Our expertise ensures that you’ll find the right program and institution for your specific needs.</p>
+            <p className=" text-red-500 hover:underline cursor-pointer">Read more....</p>
+          </div>
+          <div className="content02 bg-white/10 text-white hover:text-black py-10 px-10 rounded-md hover:bg-white/80 my-2">
+            <h2 className="text-3xl font-bold ">Personalized Guidance</h2>
+            <p className="py-5 font-semibold">From choosing the right university to visa applications, we provide step-by-step support tailored to your individual goals.</p>
+            <p className=" text-red-500 hover:underline cursor-pointer">Read more....</p>
+          </div>
+          <div className="content02 bg-white/10 text-white hover:text-black py-10 px-10 rounded-md hover:bg-white/80 my-2">
+            <h2 className="text-3xl font-bold ">Affordable Fees</h2>
+            <p className="py-5 font-semibold">Studying abroad doesn’t have to break the bank. We focus on finding affordable options for students while providing top-tier service.</p>
+            <p className=" text-red-500 hover:underline cursor-pointer">Read more....</p>
           </div>
         </div>
       </div>
-      <div className="teamMate bg-blue-800/10 pt- pb-16 lg:px-20 md:px-10 px-5">
-        <h1 data-aos="fade-up" className="text-3xl text-black py-2 font-semibold text-center">Team Mate</h1>
-        <p data-aos="fade-down" className="text-center text-lg text-black py-2">we all come together to give you the best experince you will expect to see on your projects</p>
-        <div data-aos="fade-up-left" className="image grid lg:grid-cols-3 md:grid-cols-1 lg:mx-10 md:mx-10 mx-2 gap-10 pt-8">
+      <div className="teamMate bg-blue-800/10 pt- py-16 lg:px-20 md:px-10 px-5">
+        <h1 data-aos="fade-up" className="text-4xl text-black py-2 font-bold text-center"><span>Our Team</span></h1>
+        <p data-aos="fade-down" className="text-center text-lg font-semibold text-black py-2 mx-[20%]">Meet our dedicated professionals with deep expertise in international education and admission processes. We're here to guide you every step of the way, ensuring you have the best possible experience throughout your study abroad journey.</p>
+        <div data-aos="fade-up-left" className="image grid lg:grid-cols-3 md:grid-cols-1 lg:mx-10 md:mx-10 mx-2 gap-10 mt-8">
           {Image.map((Image, index) => {
             return (
               <div data-aos="fade-up-left" className="image bg-white rounded-t-3xl" key={index}>
-                <img src={Image.src} alt="" className="bg-white rounded-t-3xl" />
-                <div className="rounded-b-2xl pt-5 text-center">
+                <img src={Image.src} alt="" className="bg-white rounded-t-3xl h-[70%] object-cover w-full" />
+                <div className="rounded-b-2xl h-[6.5em] py-10 text-center">
                   <p className="text-3xl font-bold">{Image.Name1}</p>
-                  <p className="pb-3 font-semibold pt-3 text-sm">{Image.Name2}</p>
+                  <p className="font-semibold pt-3 text-sm">{Image.Name2}</p>
                 </div>
               </div>
             )
@@ -299,22 +328,20 @@ function Home() {
         </div>
       </div>
       <div className="z-40 relative">
-        <div className="relative pt-[1%] px-[6%] bg-black/90">
-          <h1 className="lg:text-3xl md:text-xl sm:text-lg font-semibold text-white pt-32">A Few Facts About Afristud</h1>
-          <div className="lg:grid lg:grid-cols-2 gap-20 pt-[4%] ">
-            <Counting />
-            <div className="video pb-10">
-              <Link to="https://www.youtube.com/watch?v=HndV87XpkWg" className="rounded-2xl">
-                <img src={Img01} alt="" className="rounded-2xl h-[80%] w-full relative object-cover" />
-                <img src={Play} alt="" className="absolute lg:-mt-[13.7%] lg:mx-[19%] sm:-mt-[45%] sm:mx-[43%]" />
-              </Link>
+        <div className="BackgroundFlight">
+          <div className="bg-black/30 relative pt-[1%] px-[6%] h-[80dvh]">
+            <h1 className="lg:text-4xl md:text-xl sm:text-lg text-white pt-32 font-black">Student Testimonials</h1>
+            <div className="StudentTestimonials">
+              <SimpleSlider />
             </div>
           </div>
         </div>
       </div>
+      <OurTopCountries />
+      <StudySteps />
       <Newsletter />
       <div className='lg:pt-[10%] md:pt-[20%] sm:pt-[30%] bg-black/90 lg:pb-[2%] md:pb-[5%] sm:pb-[8%]'>
-        <p className='lg:text-sm md:text-sm sm:text-xs text-white text-center border-t border-white/30 pt-10 lg:mx-28'>COPYRIGHT © 2023 IDAHVIS NIG LTD ALL RIGHTS RESERVED.</p>
+        <p className='lg:text-sm md:text-sm sm:text-xs text-white text-center border-t border-white/30 pt-10 lg:mx-28'>COPYRIGHT © 2023 DoubleACloud NIG LTD ALL RIGHTS RESERVED.</p>
       </div>
     </div>
   );

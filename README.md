@@ -1,6 +1,6 @@
 <<<<<<< HEAD
-# newafristud
-redefining afristud for future.
+# DoubleACloud
+redefining doubleacloud for future.
 =======
 # React + Vite
 
